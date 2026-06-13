@@ -1,0 +1,6 @@
+[package]
+name = "research-clock"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+description = "Production Rust engine for the Research Clock v0 material scheduler"
