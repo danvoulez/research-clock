@@ -1,0 +1,38 @@
+{
+  "who": "TODO_FULL_DAN_PASSPORT_ACT_HASH",
+  "did": "declared.rule",
+  "this": "rule:lab/research-clock-agent-contract.v0",
+  "when": "2026-06-13T00:00:00Z",
+  "confirmed_by": "dan declaration; material spec RESEARCH_CLOCK_NO_COMPROMISE.md; pending gate",
+  "if_ok": "clock agents may emit material beats and propose candidates only within admitted envelopes, visas, budgets, and inference boundary",
+  "if_doubt": "open ghost for missing visa, missing budget, missing inference boundary, or ambiguous authority class",
+  "if_not": "no resident clock agent may run unsupervised",
+  "status": "claimed",
+  "law": {
+    "namespace": "lab",
+    "superior": [
+      "TODO_CONSTITUTION_ACT_HASH",
+      "TODO_DECLARED_INFERENCE_BOUNDARY_ACT_HASH",
+      "TODO_SUBSTRATE_RULE_ACT_HASH"
+    ],
+    "scope": "lab.clock",
+    "authority_class": "T1",
+    "mode": "resident_dry_run_then_propose_only",
+    "forbidden": [
+      "write_truth",
+      "close_receipt",
+      "call_model_directly",
+      "bypass_inference_boundary",
+      "exceed_budget",
+      "claim_done",
+      "release_stale_value_as_fresh",
+      "use_apply_class_key"
+    ]
+  },
+  "contract": {
+    "metronome": "observes_time_only",
+    "dispatcher": "emits_material_beats_only",
+    "worker": "single_inference_door_scorecard_then_candidate_or_ghost",
+    "gate": "only_semantic_minter"
+  }
+}

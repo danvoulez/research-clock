@@ -1,0 +1,13 @@
+{
+  "ACCEPTANCE_TESTS.md": "52f19b98f7681dac366f7af6f962895a0195a286c2a181618d1b58210f2675e6",
+  "CODEX_TASK_RESEARCH_CLOCK.md": "fab8e5efab07958e53127b54ec51841a743f1004aee0c57a85973591719bd4d3",
+  "README.md": "3f7dfe1783124e920b28f5c0bc13869a192fa9e0614c3440decc56f6609ea5d3",
+  "RESEARCH_CLOCK_NO_COMPROMISE.md": "86f968d120e38cf323af50b6853015d886e0573806fd410012a883200ea2db36",
+  "contracts/declared_clock_agent_contract.candidate.act.json": "a3956b9c3f598830e2da6b9eae8dd0be5dcb7df438933b338fab6e5e94c01fd7",
+  "contracts/registered_track_a_experiment_envelope.candidate.act.json": "f8671e3f91e1b3081778035cda09e851196fae0061fce6dffa45289ef69c676e",
+  "contracts/registered_wave_emission_plan.candidate.act.json": "6e0110119e155234d9ea73881dceacf06ffb97307bbfd7329648aeac62338eaa",
+  "migrations/clock_material_schema.sql": "3fb50ab148ccc8c22ab0f46477fb6092beb62fef791e3a8a448e227819bf5c25",
+  "scorecards/track_a_metrics.yaml": "84e0020c3983223e066cc3db5d68599eccc9104319f60da42d42b22dadef5915",
+  "specs/beat_record.schema.json": "a4109074473fda3bd5ec4363533595dc38040d52179d08178200143ee761c95b",
+  "specs/rate_law.yaml": "4da2c795827bb9e9994eb097906b7a9cc302a2f42163267f352af88efee41bb6"
+}

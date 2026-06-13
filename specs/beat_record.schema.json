@@ -1,0 +1,123 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Research Clock Call Record v0",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "beat_id",
+    "plan_ref",
+    "due_at",
+    "called_at",
+    "closed_at",
+    "prompt_ref",
+    "model_ref",
+    "inference_boundary_ref",
+    "request_hash",
+    "scorecard_ref",
+    "score_result",
+    "worker_ref",
+    "attempt"
+  ],
+  "properties": {
+    "beat_id": {
+      "type": "string"
+    },
+    "plan_ref": {
+      "type": "string"
+    },
+    "experiment_ref": {
+      "type": "string"
+    },
+    "due_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "dispatched_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "leased_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "called_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "closed_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "prompt_ref": {
+      "type": "string"
+    },
+    "prompt_hash": {
+      "type": "string"
+    },
+    "variable_ref": {
+      "type": "string"
+    },
+    "variable_hash": {
+      "type": "string"
+    },
+    "variable_as_of": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "model_ref": {
+      "type": "string"
+    },
+    "inference_boundary_ref": {
+      "type": "string"
+    },
+    "request_hash": {
+      "type": "string"
+    },
+    "response_hash": {
+      "type": "string"
+    },
+    "scorecard_ref": {
+      "type": "string"
+    },
+    "score_hash": {
+      "type": "string"
+    },
+    "score_result": {
+      "enum": [
+        "pass",
+        "fail",
+        "no_candidate",
+        "ghost_candidate",
+        "error"
+      ]
+    },
+    "candidate_hash": {
+      "type": "string"
+    },
+    "ghost_candidate_hash": {
+      "type": "string"
+    },
+    "error_code": {
+      "type": "string"
+    },
+    "worker_ref": {
+      "type": "string"
+    },
+    "lease_id": {
+      "type": "string"
+    },
+    "attempt": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "retry_of": {
+      "type": "string"
+    },
+    "redaction_status": {
+      "enum": [
+        "redacted",
+        "contains_secret_ref_only"
+      ]
+    }
+  }
+}

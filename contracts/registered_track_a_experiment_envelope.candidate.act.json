@@ -1,0 +1,41 @@
+{
+  "who": "TODO_FULL_DAN_PASSPORT_ACT_HASH",
+  "did": "registered.experiment_envelope",
+  "this": "lab.track_a.high_frequency_local_inference.wave_clock.v0",
+  "when": "2026-06-13T00:00:00Z",
+  "confirmed_by": "research clock no-compromise spec; pending gate",
+  "if_ok": "authorize bounded material high-frequency inference under declared clock contract and inference boundary",
+  "if_doubt": "open ghost for missing prompt, variable selector, scorecard, budget, or worker visa",
+  "if_not": "do not run high-frequency inference under this envelope",
+  "status": "claimed",
+  "experiment": {
+    "track": "A",
+    "question": "Do many small local grammar-bound calls produce useful accumulated institutional signal?",
+    "inference_boundary_ref": "TODO_DECLARED_INFERENCE_BOUNDARY_ACT_HASH",
+    "clock_contract_ref": "TODO_CLOCK_AGENT_CONTRACT_ACT_HASH",
+    "rate_law_ref": "TODO_WAVE_EMISSION_PLAN_ACT_HASH",
+    "prompt_ref": "TODO_PROMPT_ACT_OR_MATERIAL_REF",
+    "variable_selector_ref": "TODO_SELECTOR_ACT_OR_MATERIAL_REF",
+    "scorecard_ref": "TODO_SCORECARD_ACT_HASH",
+    "budget": {
+      "daily_call_ceiling": 7500,
+      "minute_peak_ceiling": 8
+    },
+    "SLA": {
+      "missed_after_seconds": 300
+    },
+    "allowed_outputs": [
+      "no_candidate",
+      "candidate_act",
+      "ghost_candidate",
+      "material_call_record",
+      "metrics_candidate"
+    ],
+    "forbidden_outputs": [
+      "receipt",
+      "done_claim",
+      "direct_policy_change",
+      "external_consequence"
+    ]
+  }
+}

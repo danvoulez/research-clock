@@ -1,0 +1,28 @@
+{
+  "who": "TODO_CLOCK_AGENT_OR_DAN_ACT_HASH",
+  "did": "registered.clock_emission_plan",
+  "this": "lab.clock.track_a.wave_plan.v0",
+  "when": "2026-06-13T00:00:00Z",
+  "confirmed_by": "deterministic rate law precompute; pending verification",
+  "if_ok": "use this plan to emit material beats for the bounded experiment envelope",
+  "if_doubt": "open ghost if live dispatch diverges from precomputed plan",
+  "if_not": "do not emit beats for this plan",
+  "status": "claimed",
+  "clock": {
+    "rate_law_ref": "specs/rate_law.yaml material draft",
+    "timezone": "UTC",
+    "tick_seconds": 60,
+    "precompute_only": [
+      "due_at",
+      "sequence_index",
+      "beat_id",
+      "target_calls_per_minute"
+    ],
+    "forbidden_precompute": [
+      "model_output",
+      "score_result",
+      "receipt",
+      "done_claim"
+    ]
+  }
+}

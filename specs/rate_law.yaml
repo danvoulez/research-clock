@@ -1,0 +1,28 @@
+status: material_example_not_law
+kind: research_clock_rate_law_v0
+timezone: UTC
+tick_seconds: 60
+law:
+  function: clamped_sine_integral_with_fractional_carry
+  base_cpm: 4
+  amplitude_cpm: 3
+  min_cpm: 1
+  max_cpm: 8
+  period_seconds: 86400
+  phase_utc: '2026-06-14T03:00:00Z'
+budget:
+  daily_call_ceiling: 7500
+  minute_peak_ceiling: 8
+  breach_action: stop_emission_and_open_ghost_candidate
+precompute:
+  allowed: true
+  precomputes:
+  - due_at
+  - sequence_index
+  - beat_id
+  - target_calls_per_minute
+  forbidden:
+  - model_output
+  - score_result
+  - receipt
+  - done_claim

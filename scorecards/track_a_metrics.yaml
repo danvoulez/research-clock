@@ -1,0 +1,36 @@
+status: scorecard_projection_material_not_law
+track: Track A - high-frequency local inference
+metrics:
+- target_calls_per_minute
+- emitted_calls_per_minute
+- honored_calls_per_minute
+- missed_calls_per_minute
+- backlog_depth
+- backlog_age_p95
+- due_to_dispatch_ms_p50
+- due_to_dispatch_ms_p95
+- dispatch_to_call_ms_p50
+- dispatch_to_call_ms_p95
+- call_latency_ms_p50
+- call_latency_ms_p95
+- tokens_per_second_prompt
+- tokens_per_second_generation
+- schema_valid_rate
+- scorecard_pass_rate
+- no_candidate_rate
+- ghost_candidate_rate
+- candidate_submission_rate
+- candidate_admission_rate
+- useful_signal_rate
+- cost_per_call
+- cost_per_useful_candidate
+- cost_per_admitted_consequence
+- worker_error_rate
+- single_door_violation_count
+- budget_breach_count
+hard_failures:
+- single_door_violation_count > 0
+- secret_leak_detected
+- pg_cron_minted_act
+- worker_emitted_receipt_without_policy
+- budget_breach_without_ghost
