@@ -34,3 +34,52 @@ Supporting material:
 Admission note:
 
 Do not admit candidate Acts as-is if they contain TODO placeholders. Fill exact passport, superior Act hashes, budget, inference boundary, and schedule data first.
+
+## Production material runtime added in this branch
+
+This repository now includes a runnable `research-clock` Python package for the
+v0 material engine. It implements the production separation required by the
+spec while keeping all outputs material-only unless a later Gate path admits
+them:
+
+- `research-clock plan` precomputes deterministic UTC beat IDs from the clamped
+  sine rate law.
+- `research-clock dispatch-dry-run` replays dispatcher output without DB writes
+  and without any inference imports.
+- `research-clock dispatch-write` writes idempotent material beats to a durable
+  SQLite material store.
+- `research-clock worker-once` leases one due beat and calls only the declared
+  inference boundary URL, then records request/response/score hashes and the
+  four required timestamps.
+- `research-clock ghost-missed` creates a batched Ghost candidate for beats past
+  SLA.
+- `research-clock metrics` rebuilds minute metrics from material tables.
+
+Example dry run:
+
+```bash
+research-clock dispatch-dry-run \
+  --plan-ref lab.clock.track_a.wave_plan.v0 \
+  --experiment-ref lab.track_a.high_frequency_local_inference.wave_clock.v0 \
+  --prompt-ref TODO_PROMPT_ACT_OR_MATERIAL_REF \
+  --variable-selector-ref TODO_SELECTOR_ACT_OR_MATERIAL_REF \
+  --start 2026-06-14T00:00:00Z \
+  --end 2026-06-14T00:10:00Z
+```
+
+Example material write:
+
+```bash
+research-clock dispatch-write \
+  --store .local/research-clock.sqlite \
+  --dispatcher-ref dispatcher:local:v0 \
+  --plan-ref lab.clock.track_a.wave_plan.v0 \
+  --experiment-ref lab.track_a.high_frequency_local_inference.wave_clock.v0 \
+  --prompt-ref TODO_PROMPT_ACT_OR_MATERIAL_REF \
+  --variable-selector-ref TODO_SELECTOR_ACT_OR_MATERIAL_REF \
+  --start 2026-06-14T00:00:00Z \
+  --end 2026-06-14T00:10:00Z
+```
+
+The runtime still does not admit Acts, close Receipts, claim done, call direct
+LAB512 bypasses for a `LAB_8GB` boundary, or let the dispatcher call models.
